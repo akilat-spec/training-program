@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+
+            // function orderFoodCallback(food, callback) {
+            // console.log(`Ordering ${food}...`);
+            // setTimeout(() => {
+            //     const isAvailable=Math.random()>0.2;  
+            //     if(isAvailable)
+            //       callback(`${food} delivered!`);
+            // }, 2);
+            // }
+            // function Message(msg) {
+            // console.log(msg);
+            // }
+            // orderFoodCallback("Burger",Message );
+
+
+        function orderFoodPromise(food) {
+            console.log(`Ordering ${food}...`);
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const isAvailable=Math.random()>0.2;  
+                    if(isAvailable)
+                          resolve(`${food} delivered!`);
+                    else
+                          reject(`${food} Not Available `); 
+                }, 2000);
+            });
+            }
+
+            orderFoodPromise("Burger")
+            .then((msg) => console.log(msg))
+            .catch((err) => console.log("Error:", err));
+      </script>
+</body>
+</html>

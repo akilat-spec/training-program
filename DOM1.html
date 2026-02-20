@@ -1,0 +1,19 @@
+<div id="room">
+  <h1>This is the Bedroom</h1>
+  <button onclick="changeRoom()">Go to Kitchen</button>
+</div>
+<script>
+   function changeRoom() {
+  // 1. Grab the room
+  const room = document.getElementById('room');
+
+  // 2. Wipe everything inside (The "Redirect" feel)
+  room.innerHTML = ""; 
+
+  // 3. Put new things in
+  room.innerHTML = "<h1>This is now the Kitchen!</h1><p>Enjoy your meal.</p>";
+  
+  // 4. Change the wall color
+  document.body.style.backgroundColor = "orange";
+}
+</script>

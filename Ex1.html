@@ -1,0 +1,23 @@
+<html>
+      <head>
+            <title>Java Script</title>
+            <script>
+                function sum()
+                {
+                    let a=parseInt(document.getElementById("input1").value)
+                    let b=parseInt(document.getElementById("input2").value)
+                    document.getElementById("result").innerHTML="<b>Sum of Two Numbe </b>"+(a+b);
+                }
+            </script>
+      </head>
+      <body>
+            <label>Enter First Number</label>
+            <input type="text" id="input1"/>
+            <label>Enter Second Number</label>
+            <input type="text" id="input2"/>
+            <br>
+            <br>
+            <p id="result"></p>
+            <button onclick="sum()">Sum of Two Number</button>
+      </body>
+</html>
